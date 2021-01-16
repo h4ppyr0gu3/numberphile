@@ -1,0 +1,4 @@
+numberphile
+*.o
+data.dat
+vertices.dat

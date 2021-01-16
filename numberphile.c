@@ -1,3 +1,5 @@
+// git@github.com:h4ppyr0gu3/numberphile.git
+
 #include <stdlib.h>
 #include <stdio.h>
 #include "math.h"
@@ -33,12 +35,12 @@ int main() {
 
 	FILE *data;
 	data = fopen("data.dat", "w");
-	fprintf(data, "%lf %lf\n", previousx, previousy);
+	fprintf(data, "%lf %lf\n", previousx, previousy); // print the values to another to allow 2 colours
 
 	int *roll;
 
-	roll = malloc(n * 2 * sizeof(int)); // dynamically
-
+	roll = malloc(n * 2 * sizeof(int)); // dynamically allocate more storage 
+																			// than necessary to avoid segmentation fault
 	srand(time(NULL));
 	for(int i =  0; i < n; i++) {
 		roll[i] = ceil(((double)rand()/RAND_MAX) * 3); // randomly generate numbers between 1 and 3 
