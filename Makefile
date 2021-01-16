@@ -4,3 +4,5 @@ numberphile: numberphile.c
 gnuplot: vertices.dat
 	gnuplot 
 	plot 'vertices.dat'
+clean: vertices.dat data.dat numberphile numberphile.o
+	rm vertices.dat data.dat numberphile numberphile.o
